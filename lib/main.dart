@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Colossal Hate App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +25,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Colossal Hate"),
+        ),
+        body: DescriptionPlace(),
+      )
     );
   }
 }
