@@ -1,13 +1,43 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
+
+  late String namePlace;
+  late int stars;
+  late String descriptionPLace;
+
+  //Constructor
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPLace);
+
+
   @override
   Widget build(BuildContext context) {
+
+    final star_border = Container(
+      margin: const EdgeInsets.only(top: 323.0, right: 3.0),
+      child: const Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final star_half = Container(
+      margin: const EdgeInsets.only(top: 323.0, right: 3.0),
+      child: const Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
     final comment = Container(
       margin: const EdgeInsets.only(top: 10.0, left: 20, right: 20),
-      child: const Text(
-        """Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum temporibus fugit voluptas at perferendis nemo, eiu incidunt distinctio repellat laboriosam reiciendis vel porro impedit officiis adipisci, tempore vero hic obcaecati! Alias quas quam quaerat pariatur excepturi officia quibusdam, quia impedit placeat qui nostrum iure quod illum sunt possimus, molestias exercitationem. """,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+      child: Text(
+        descriptionPLace,
+        style: const TextStyle(
+            fontFamily: "Lato",
+            fontSize: 20,
+            fontWeight: FontWeight.w500
+        ),
         textAlign: TextAlign.left,
       ),
     );
@@ -28,14 +58,18 @@ class DescriptionPlace extends StatelessWidget {
             left: 20.0,
             right: 20.0,
           ),
-          child: const Text(
-            'Duwili ella',
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w900),
+          child: Text(
+            namePlace,
+            style: const TextStyle(
+                fontFamily: "Lato",
+                fontSize: 30.0,
+                fontWeight: FontWeight.w900
+            ),
             textAlign: TextAlign.left,
           ),
         ),
         Row(
-          children: <Widget>[star, star, star, star, star],
+          children: <Widget>[star, star, star, star, star_border],
         ),
       ],
     );
