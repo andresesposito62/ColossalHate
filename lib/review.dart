@@ -12,8 +12,37 @@ class Review extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    final userInfo = Container(
 
+    final userComment = Container(
+      margin: const EdgeInsets.only(
+          left: 20.0
+      ),
+
+      child: Text(
+        details,
+        textAlign: TextAlign.left,
+        style: const TextStyle(
+            fontFamily: "Lato",
+            fontSize: 13.0,
+            fontWeight: FontWeight.w900
+        ),
+      ),
+    );
+
+    final userInfo = Container(
+      margin: const EdgeInsets.only(
+          left: 20.0
+      ),
+
+      child: Text(
+        details,
+        textAlign: TextAlign.left,
+        style: const TextStyle(
+            fontFamily: "Lato",
+            fontSize: 13.0,
+          color: Color(0xffa3a5a7)
+        ),
+      ),
     );
 
 
@@ -35,7 +64,9 @@ class Review extends StatelessWidget{
     final userDetails = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget> [
-        userName
+        userName,
+        userInfo,
+        userComment
       ],
     );
 
@@ -52,14 +83,15 @@ class Review extends StatelessWidget{
         shape: BoxShape.circle,
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("asset/img/_DSC5109-2.jpg")
+          image: AssetImage("assets/img/_DSC5109-2.jpg")
         )
       ),
     );
 
     return Row(
       children: [
-          photo
+          photo,
+          userDetails,
       ],
     );
   }

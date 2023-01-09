@@ -90,7 +90,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/img/_DSC5109-2.jpg
+    - assets/img/
 
   fonts:
     - family: Lato

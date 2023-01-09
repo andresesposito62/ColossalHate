@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Colossal Hate"),
         ),
-        body: DescriptionPlace("Villavicencio", 2, "Hola mundo"),
+        body: ReviewList(),
       )
     );
   }
