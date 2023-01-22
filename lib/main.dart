@@ -6,8 +6,26 @@ import 'gradient_back.dart';
 import 'header_appbar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ColossalHateApp());
 }
+
+class ColossalHateApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Image.network("https://seeded-session-images.scdn.co/v1/img/artist/4bc1XCLK2W9gRU3lMLkgvz/en"),
+        ),
+      )
+
+    );
+  }
+
+}
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
