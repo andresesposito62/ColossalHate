@@ -1,3 +1,4 @@
+import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/review.dart';
 import 'package:flutter/material.dart';
 import 'description_place.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
           children: [
             ListView(
               children: [
-                DescriptionPlace("Colossal Hate Place", 4, loremIspsum),
+                DescriptionPlace(StringsEs.colossalHate, StringsEs.descriptionField),
                 ReviewList()
               ],
             ),
