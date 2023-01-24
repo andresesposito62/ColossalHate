@@ -1,13 +1,14 @@
+import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:flutter/material.dart';
 
-class Review extends StatelessWidget{
+class DigitalPlatform extends StatelessWidget{
 
-  String pathImage = "asset/img/_DSC5109-2.jpg";
+  static const instagramLogoPath = "assets/img/instagram-logo.png";
   String name = "Andrés Espósito";
   String details = "1 review 5 photos";
   String comment = "Heavy metal";
 
-  Review(this.pathImage, this.name, this.details, this.comment);
+  DigitalPlatform(this.name, this.details, this.comment, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +84,7 @@ class Review extends StatelessWidget{
         shape: BoxShape.circle,
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/img/_DSC5109-2.jpg")
+          image: AssetImage(instagramLogoPath)
         )
       ),
     );

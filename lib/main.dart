@@ -1,8 +1,8 @@
 import 'package:colossal_hate/Strings/StringsEs.dart';
-import 'package:colossal_hate/review.dart';
+import 'package:colossal_hate/digital_platform.dart';
 import 'package:flutter/material.dart';
 import 'description_place.dart';
-import 'review_list.dart';
+import 'digital_platform_list.dart';
 import 'gradient_back.dart';
 import 'header_appbar.dart';
 
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
             ListView(
               children: [
                 DescriptionPlace(StringsEs.colossalHate, StringsEs.descriptionField),
-                ReviewList()
+                DigitalPlatformList()
               ],
             ),
             HeaderAppBar()
