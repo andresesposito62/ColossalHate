@@ -3,13 +3,17 @@ import 'gradient_back.dart';
 import 'card_image_list.dart';
 
 class HeaderAppBar extends StatelessWidget{
+  const HeaderAppBar({super.key});
+
 
   @override
   Widget build(BuildContext context) {
 
+    const String colossalHate = "Colossal Hate";
+
     return Stack(
       children: [
-        GradientBack("Bienvenido"),
+        GradientBack(colossalHate),
         CardImageList()
       ],
     );

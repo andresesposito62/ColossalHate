@@ -14,8 +14,8 @@ class GradientBack extends StatelessWidget{
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xff4268D3),
-            Color(0xff584cD1)
+            Color(0xff000000),
+            Color(0xff000000)
           ],
           begin: FractionalOffset(0.2, 0.0),
           end: FractionalOffset(1.0, 0.6),
@@ -23,6 +23,8 @@ class GradientBack extends StatelessWidget{
           tileMode: TileMode.clamp
         )
       ),
+
+      alignment: Alignment(-0.9, -0.6),
 
       child: Text(
         title,
@@ -33,8 +35,6 @@ class GradientBack extends StatelessWidget{
           fontWeight: FontWeight.bold
         ),
       ),
-
-      alignment: Alignment(-0.9, -0.6),
     );
 
   }
