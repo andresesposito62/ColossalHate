@@ -1,39 +1,103 @@
-import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:flutter/material.dart';
 
 class DigitalPlatform extends StatelessWidget{
 
-  static const instagramLogoPath = "assets/img/instagram-logo.png";
-  String name = "Andrés Espósito";
-  String details = "1 review 5 photos";
-  String comment = "Heavy metal";
+  static const String instagramLogoPath = "assets/img/instagram-logo.png";
+  static const String facebookLogoPath = "assets/img/facebook-logo.png";
+  static const String tiktokLogoPath = "assets/img/tiktok-logo.png";
+  static const String youtubeLogoPath = "assets/img/youtube-logo.png";
+  late int socialMediaId = 1;
 
-  DigitalPlatform(this.name, this.details, this.comment, {super.key});
+  DigitalPlatform(this.socialMediaId, {super.key});
 
   @override
   Widget build(BuildContext context) {
 
-    final photo = Container(
-      margin: const EdgeInsets.only(
-        top: 20.0,
-        left: 20.0
-      ),
+    Container digitalPlatformContainer = Container();
 
-      width: 80.0,
-      height: 80.0,
+    if(socialMediaId == 1){
+      digitalPlatformContainer = Container(
+        margin: const EdgeInsets.only(
+            top: 10.0,
+            left: 10.0
+        ),
 
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(instagramLogoPath)
-        )
-      ),
-    );
+        width: 50.0,
+        height: 50.0,
+
+        decoration: const BoxDecoration(
+            shape: BoxShape.rectangle,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(instagramLogoPath)
+            )
+        ),
+      );
+
+    }else if(socialMediaId == 2){
+      digitalPlatformContainer = Container(
+        margin: const EdgeInsets.only(
+            top: 10.0,
+            left: 10.0
+        ),
+
+        width: 50.0,
+        height: 50.0,
+
+        decoration: const BoxDecoration(
+            shape: BoxShape.rectangle,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(facebookLogoPath)
+            )
+        ),
+      );
+
+    }
+    else if(socialMediaId == 3){
+      digitalPlatformContainer = Container(
+        margin: const EdgeInsets.only(
+            top: 10.0,
+            left: 10.0
+        ),
+
+        width: 50.0,
+        height: 50.0,
+
+        decoration: const BoxDecoration(
+            shape: BoxShape.rectangle,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(tiktokLogoPath)
+            )
+        ),
+      );
+
+    }
+    else if(socialMediaId == 4){
+      digitalPlatformContainer = Container(
+        margin: const EdgeInsets.only(
+            top: 10.0,
+            left: 10.0
+        ),
+
+        width: 50.0,
+        height: 50.0,
+
+        decoration: const BoxDecoration(
+            shape: BoxShape.rectangle,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(youtubeLogoPath)
+            )
+        ),
+      );
+
+    }
 
     return Row(
       children: [
-          photo
+        digitalPlatformContainer
       ],
     );
   }

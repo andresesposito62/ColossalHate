@@ -9,32 +9,22 @@ class DigitalPlatformList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-      return Container(
-        height: 100.0,
-        child: ListView(
-          padding: const EdgeInsets.all(2.0),
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            DigitalPlatform("Instagram","Detalles", "comentarios"),
-            DigitalPlatform("Andres", "Detalles", "comentarios"),
-            DigitalPlatform("Andres", "Detalles", "comentarios"),
-            DigitalPlatform("Instagram","Detalles", "comentarios"),
-            DigitalPlatform("Andres", "Detalles", "comentarios"),
-            DigitalPlatform("Andres", "Detalles", "comentarios")
-          ],
-        ),
-      );
-
-
-
-    /*return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    final socialMediaRow = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        DigitalPlatform("Instagram","Detalles", "comentarios"),
-        DigitalPlatform("Andres", "Detalles", "comentarios"),
-        DigitalPlatform("Andres", "Detalles", "comentarios")
+        DigitalPlatform(1),
+        DigitalPlatform(2),
+        DigitalPlatform(3),
+        DigitalPlatform(4),
       ],
-    );*/
+    );
+
+    final socialMediaContainer = Container(
+      margin: const EdgeInsets.all(10.0),
+      child: socialMediaRow,
+    );
+
+    return socialMediaContainer;
 
   }
 }
