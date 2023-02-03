@@ -1,6 +1,7 @@
 import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/digital_platform.dart';
 import 'package:flutter/material.dart';
+import 'card_image_list.dart';
 import 'description_place.dart';
 import 'digital_platform_list.dart';
 import 'gradient_back.dart';
@@ -40,25 +41,47 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    List a = [Text("a"), Text("b")];
+
     return MaterialApp(
       title: 'Colossal Hate App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Stack(
+        body: ListView(
+          scrollDirection: Axis.vertical,
           children: [
-            ListView(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    alignment: Alignment.center,
+                    color: Colors.black,
+                    child: Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c")
+                ),
+                Container(
+                    child: DigitalPlatformList()
+                )
+
+                /*ListView(
               padding: const EdgeInsets.only(left: 0.0, top: 50.0, right: 0.0, bottom: 0.0),
               children: [
                 DescriptionPlace(StringsEs.colossalHate, StringsEs.descriptionField),
                 DigitalPlatformList()
               ],
-            ),
-            HeaderAppBar()
+            ),*/
+                //HeaderAppBar()
 
+              ],
+            ),
           ],
-        ),
+        )
+
+
+
+
       )
     );
   }
