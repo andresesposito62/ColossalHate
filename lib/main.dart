@@ -57,9 +57,9 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                    alignment: Alignment.center,
-                    color: Colors.black,
-                    child: Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c")
+                  alignment: Alignment.center,
+                  color: Colors.black,
+                  child: Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c")
                 ),
                 Container(
                     child: DigitalPlatformList()
