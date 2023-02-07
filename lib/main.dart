@@ -8,10 +8,10 @@ import 'gradient_back.dart';
 import 'header_appbar.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ColossalHateApp());
 }
 
-class ColossalHateApp extends StatelessWidget{
+/*class ColossalHateApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,11 +29,11 @@ class ColossalHateApp extends StatelessWidget{
     );
   }
 
-}
+}*/
 
 
 
-class MyApp extends StatelessWidget {
+/*class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   final String loremIspsum = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
@@ -85,6 +85,28 @@ class MyApp extends StatelessWidget {
       )
     );
   }
+}*/
+
+
+class ColossalHateApp extends StatefulWidget{
+  @override
+  State<ColossalHateApp> createState() => _ColossalHateAppState();
+
+}
+
+class _ColossalHateAppState extends State<ColossalHateApp>{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("probando"),
+            )
+        )
+    );
+  }
+
 }
 
 class MyHomePage extends StatefulWidget {
@@ -107,47 +129,32 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:   Scaffold(
+          appBar: AppBar(
+            title: Text(widget.title),
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text(
+                  'You have pushed the button this many times:',
+                ),
+                Text(
+                  '$_counter',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ), // This trailing comma makes auto-formatting nicer for build methods.
+        )
     );
   }
 }
