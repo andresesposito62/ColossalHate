@@ -1,5 +1,6 @@
 import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/digital_platform.dart';
+import 'package:colossal_hate/header.dart';
 import 'package:flutter/material.dart';
 import 'card_image_list.dart';
 import 'description_place.dart';
@@ -101,13 +102,10 @@ class _ColossalHateAppState extends State<ColossalHateApp>{
         debugShowCheckedModeBanner: false,
         home: SafeArea(
             child: Scaffold(
-              appBar: AppBar(
-                title: Text("probando"),
-              ),
               body: Center(
                 child: ListView(
                   children: [
-                    Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c"),
+                    Header(),
                     DigitalPlatformList()
                   ],
                 ),
