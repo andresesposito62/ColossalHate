@@ -99,20 +99,22 @@ class _ColossalHateAppState extends State<ColossalHateApp>{
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text("probando"),
-            ),
-          body: Center(
-            child: ListView(
-              children: [
-                Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c"),
-                DigitalPlatformList()
-              ],
-
-            ),
-          ),
+        home: SafeArea(
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text("probando"),
+              ),
+              body: Center(
+                child: ListView(
+                  children: [
+                    Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c"),
+                    DigitalPlatformList()
+                  ],
+                ),
+              ),
+            )
         )
+
     );
   }
 
