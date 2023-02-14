@@ -9,8 +9,10 @@ class GradientBack extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
-      height: 250.0,
+      height: height / 3.5,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
