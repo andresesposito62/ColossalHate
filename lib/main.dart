@@ -1,6 +1,8 @@
 import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/digital_platform.dart';
 import 'package:colossal_hate/header.dart';
+import 'package:colossal_hate/mobile/lading_page_mobile.dart';
+import 'package:colossal_hate/web/landing_page_web.dart';
 import 'package:flutter/material.dart';
 import 'card_image_list.dart';
 import 'description_place.dart';
@@ -12,81 +14,26 @@ void main() {
   runApp(ColossalHateApp());
 }
 
-/*class ColossalHateApp extends StatelessWidget{
+
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Colossal Hate App',
-      home:Scaffold(
-        appBar: AppBar(
-
-
-        ),
-        body: Center(
-          child: Image.network("https://seeded-session-images.scdn.co/v1/img/artist/4bc1XCLK2W9gRU3lMLkgvz/en"),
-        ),
-      )
-
-    );
-  }
-
-}*/
-
-
-
-/*class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  final String loremIspsum = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-
-    List a = [Text("a"), Text("b")];
-
-    return MaterialApp(
-      title: 'Colossal Hate App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  color: Colors.black,
-                  child: Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c")
-                ),
-                Container(
-                    child: DigitalPlatformList()
-                )
-
-                /*ListView(
-              padding: const EdgeInsets.only(left: 0.0, top: 50.0, right: 0.0, bottom: 0.0),
-              children: [
-                DescriptionPlace(StringsEs.colossalHate, StringsEs.descriptionField),
-                DigitalPlatformList()
-              ],
-            ),*/
-                //HeaderAppBar()
-
-              ],
-            ),
-          ],
-        )
-
-
-
-
+      home: LayoutBuilder(
+        builder: (context, constraints){
+          if(constraints.maxWidth > 800){//The device is Web normally if >800
+            return LandingPageWeb();
+          }else{
+            return LandingPageMobile();
+          }
+        },
       )
     );
   }
-}*/
+}
 
 
 class ColossalHateApp extends StatefulWidget{
@@ -94,6 +41,7 @@ class ColossalHateApp extends StatefulWidget{
   State<ColossalHateApp> createState() => _ColossalHateAppState();
 
 }
+
 
 class _ColossalHateAppState extends State<ColossalHateApp>{
   @override
