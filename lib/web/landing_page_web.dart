@@ -19,6 +19,10 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0.0,
+        iconTheme: IconThemeData(
+          size: 25.0,
+          color: Colors.white
+        ),
         title: Row(
           children: [
             TabsWeb(StringsEs.colossalHate),
