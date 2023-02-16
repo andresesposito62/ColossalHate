@@ -1,7 +1,7 @@
-
 import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/components.dart';
 import 'package:flutter/material.dart';
+import '../digital_platform_list.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({Key? key}) : super(key: key);
@@ -28,6 +28,19 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             TabsWeb(StringsEs.colossalHate),
           ],
         ),
+      ),
+      body:   SafeArea(
+        child: Scaffold(
+          body: Center(
+            child: ListView(
+              children: [
+                //CardImage("assets/img/_DSC5109-2.jpg"),
+                Image.asset("assets/img/_DSC5109-2.jpg"),
+                DigitalPlatformList()
+              ],
+            ),
+          ),
+        )
       ),
     );
   }

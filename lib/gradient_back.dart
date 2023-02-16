@@ -28,7 +28,7 @@ class GradientBack extends StatelessWidget{
 
       alignment: Alignment(-0.9, -0.6),
 
-      child: Text(
+      /*child: Text(
         title,
         style: const TextStyle(
           color: Colors.white,
@@ -36,7 +36,7 @@ class GradientBack extends StatelessWidget{
           fontFamily: "Lato",
           fontWeight: FontWeight.bold
         ),
-      ),
+      ),*/
     );
 
   }
