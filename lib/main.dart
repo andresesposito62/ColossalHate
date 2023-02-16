@@ -11,10 +11,8 @@ import 'gradient_back.dart';
 import 'header_appbar.dart';
 
 void main() {
-  runApp(ColossalHateApp());
+  runApp(MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
