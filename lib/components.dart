@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TabsWeb extends StatefulWidget {
@@ -10,15 +9,45 @@ class TabsWeb extends StatefulWidget {
 }
 
 class _TabsWebState extends State<TabsWeb> {
+
+  bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
-    return Text(widget.title,
-      style: const TextStyle(
-          color: Colors.white,
-          fontSize: 30.0,
-          fontFamily: "Lato",
-          fontWeight: FontWeight.bold
-      )
-        ,);
+
+    const selectedStyle = TextStyle(
+        color: Colors.white,
+        fontSize: 30.0,
+        fontFamily: "Lato",
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.underline,
+        decorationThickness: 1,
+        decorationColor: Colors.white54
+    );
+
+    const unselectedStyle = TextStyle(
+        color: Colors.white,
+        fontSize: 27.0,
+        fontFamily: "Lato",
+        fontWeight: FontWeight.bold
+    );
+
+    return MouseRegion(
+      onEnter: (_){
+        setState(() {
+          isSelected = true;
+        });
+      },
+      onExit: (_){
+        setState(() {
+          isSelected = false;
+        });
+      },
+      child: AnimatedDefaultTextStyle(
+        duration: const Duration(milliseconds: 100),
+        style: isSelected ? selectedStyle :unselectedStyle,
+        child: Text(widget.title,),
+      ),
+    );
   }
 }
