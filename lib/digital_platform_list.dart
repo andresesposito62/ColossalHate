@@ -8,6 +8,20 @@ class DigitalPlatformList extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    
+    final socialMediaText =  Text(
+      StringsEs.SOCIAL_MEDIA_TEXT,
+      style: TextStyle(
+          color: Colors.black,
+          fontSize: 17.0,
+          fontFamily: "Lato",
+          fontWeight: FontWeight.bold
+      ),
+    );
+
+    final spaceText =  Text(
+      "",
+    );
 
     final socialMediaRow = Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -20,8 +34,15 @@ class DigitalPlatformList extends StatelessWidget{
     );
 
     final socialMediaContainer = Container(
-      margin: const EdgeInsets.all(10.0),
-      child: socialMediaRow,
+      margin: const EdgeInsets.all(30.0),
+      alignment: Alignment.center,
+      child: Column(
+        children: [
+          socialMediaText,
+          spaceText,
+          socialMediaRow,
+        ],
+      ),
     );
 
     return socialMediaContainer;

@@ -48,6 +48,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Image.asset("assets/img/_DSC5109-2.jpg",
                   alignment: Alignment(-0.9, -0.72),
                   height: height,
+                  width: width,
                   fit: BoxFit.cover,),
                 DigitalPlatformList()
               ],
