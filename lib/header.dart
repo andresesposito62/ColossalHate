@@ -20,7 +20,7 @@ class Header extends StatelessWidget{
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
-            GradientBack(StringsEs.colossalHate),
+            GradientBack(StringsEs.COLOSSAL_HATE),
             //Image.network("https://i.scdn.co/image/ab6761610000e5ebff8e0c3d0ae582c24902509c")
             CardImage("assets/img/_DSC5109-2.jpg")
           ],

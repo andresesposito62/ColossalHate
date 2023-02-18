@@ -26,7 +26,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
         ),
         title: Row(
           children: [
-            TabsWeb(StringsEs.colossalHate),
+            TabsWeb(StringsEs.COLOSSAL_HATE, "title"),
           ],
         ),
       ),

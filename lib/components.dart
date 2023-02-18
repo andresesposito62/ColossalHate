@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class TabsWeb extends StatefulWidget {
   final title;
-  const TabsWeb(this.title, {Key? key}) : super(key: key);
+  final typeFont;
+  const TabsWeb(this.title, this.typeFont,{Key? key}) : super(key: key);
 
   @override
   State<TabsWeb> createState() => _TabsWebState();
@@ -11,11 +12,13 @@ class TabsWeb extends StatefulWidget {
 class _TabsWebState extends State<TabsWeb> {
 
   bool isSelected = false;
+  TextStyle textStyleSelected = TextStyle();
+  TextStyle textStyleUnselected = TextStyle();
 
   @override
   Widget build(BuildContext context) {
 
-    const selectedStyle = TextStyle(
+    const selectedTitleStyle = TextStyle(
         color: Colors.white,
         fontSize: 30.0,
         fontFamily: "Lato",
@@ -25,12 +28,37 @@ class _TabsWebState extends State<TabsWeb> {
         decorationColor: Colors.white54
     );
 
-    const unselectedStyle = TextStyle(
+    const unselectedTitleStyle = TextStyle(
         color: Colors.white,
         fontSize: 27.0,
         fontFamily: "Lato",
         fontWeight: FontWeight.bold
     );
+
+    const selectedSubtitleStyle = TextStyle(
+        color: Colors.white,
+        fontSize: 20.0,
+        fontFamily: "Lato",
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.underline,
+        decorationThickness: 1,
+        decorationColor: Colors.white54
+    );
+
+    const unselectedSubtitleStyle = TextStyle(
+        color: Colors.white,
+        fontSize: 17.0,
+        fontFamily: "Lato",
+        fontWeight: FontWeight.bold
+    );
+
+    if(widget.typeFont == "title"){
+      textStyleSelected = selectedTitleStyle;
+      textStyleUnselected = unselectedTitleStyle;
+    }else if (widget.typeFont == "subtitle"){
+      textStyleSelected = selectedSubtitleStyle;
+      textStyleUnselected = unselectedSubtitleStyle;
+    }
 
     return MouseRegion(
       onEnter: (_){
@@ -45,7 +73,7 @@ class _TabsWebState extends State<TabsWeb> {
       },
       child: AnimatedDefaultTextStyle(
         duration: const Duration(milliseconds: 100),
-        style: isSelected ? selectedStyle :unselectedStyle,
+        style: isSelected ? textStyleSelected :textStyleUnselected,
         child: Text(widget.title,),
       ),
     );

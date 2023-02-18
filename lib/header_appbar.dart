@@ -11,7 +11,7 @@ class HeaderAppBar extends StatelessWidget{
 
     return Stack(
       children: [
-        GradientBack(StringsEs.colossalHate),
+        GradientBack(StringsEs.COLOSSAL_HATE),
         CardImageList()
       ],
     );

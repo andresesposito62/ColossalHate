@@ -29,7 +29,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
         ),
         title: Row(
           children: [
-            TabsWeb(StringsEs.colossalHate),
+            TabsWeb(StringsEs.COLOSSAL_HATE, "title"),
+            Spacer(flex: 5,),
+            TabsWeb(StringsEs.OUR_MUSIC, "subtitle"),
+            Spacer(),
+            TabsWeb(StringsEs.MEDIA, "subtitle"),
+            Spacer(),
+            TabsWeb(StringsEs.CONTACT_US, "subtitle"),
+            Spacer(),
           ],
         ),
       ),
