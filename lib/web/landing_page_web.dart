@@ -13,6 +13,10 @@ class LandingPageWeb extends StatefulWidget {
 class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       drawer: Drawer(),
       backgroundColor: Colors.white,
@@ -34,8 +38,10 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           body: Center(
             child: ListView(
               children: [
-                //CardImage("assets/img/_DSC5109-2.jpg"),
-                Image.asset("assets/img/_DSC5109-2.jpg"),
+                Image.asset("assets/img/_DSC5109-2.jpg",
+                  alignment: Alignment(-0.9, -0.72),
+                  height: height,
+                  fit: BoxFit.cover,),
                 DigitalPlatformList()
               ],
             ),
