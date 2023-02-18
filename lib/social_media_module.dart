@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class SocialMediaModule extends StatelessWidget{
 
-  static const instagramLogoPath = "assets/img/instagram-logo.png";
+  static const instagramLogoPath = "assets/img/instagram2-logo.png";
 
   @override
   Widget build(BuildContext context) {
