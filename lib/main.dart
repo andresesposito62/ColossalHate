@@ -6,7 +6,7 @@ import 'package:colossal_hate/web/landing_page_web.dart';
 import 'package:flutter/material.dart';
 import 'card_image_list.dart';
 import 'description_place.dart';
-import 'digital_platform_list.dart';
+import 'social_media_module.dart';
 import 'gradient_back.dart';
 import 'header_appbar.dart';
 
@@ -52,7 +52,7 @@ class _ColossalHateAppState extends State<ColossalHateApp>{
                 child: ListView(
                   children: [
                     Header(),
-                    DigitalPlatformList()
+                    SocialMediaModule()
                   ],
                 ),
               ),

@@ -1,8 +1,10 @@
+import 'package:colossal_hate/digital_platform.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Strings/StringsEs.dart';
 import '../components.dart';
-import '../digital_platform_list.dart';
+import '../digital_platform_module.dart';
+import '../social_media_module.dart';
 
 class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({Key? key}) : super(key: key);
@@ -37,7 +39,8 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 children: [
                   //CardImage("assets/img/_DSC5109-2.jpg"),
                   Image.asset("assets/img/_DSC5109-2.jpg"),
-                  DigitalPlatformList()
+                  SocialMediaModule(),
+                  DigitalPlatformModule()
                 ],
               ),
             ),

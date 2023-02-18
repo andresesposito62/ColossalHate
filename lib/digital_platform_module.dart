@@ -1,16 +1,15 @@
-import 'package:colossal_hate/Strings/StringsEs.dart';
-import 'package:colossal_hate/digital_platform.dart';
 import 'package:flutter/material.dart';
 
-class DigitalPlatformList extends StatelessWidget{
+import 'Strings/StringsEs.dart';
+import 'digital_platform.dart';
 
-  static const instagramLogoPath = "assets/img/instagram-logo.png";
+class DigitalPlatformModule extends StatelessWidget {
+  const DigitalPlatformModule({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
-    final socialMediaText =  Text(
-      StringsEs.SOCIAL_MEDIA_TEXT,
+    final platform =  Text(
+      StringsEs.MUSICAL_PLATFORM_TEXT,
       style: TextStyle(
           color: Colors.black,
           fontSize: 17.0,
@@ -34,11 +33,11 @@ class DigitalPlatformList extends StatelessWidget{
     );
 
     final socialMediaContainer = Container(
-      margin: const EdgeInsets.all(30.0),
+      margin: const EdgeInsets.all(15.0),
       alignment: Alignment.center,
       child: Column(
         children: [
-          socialMediaText,
+          platform,
           spaceText,
           socialMediaRow,
         ],
@@ -46,6 +45,5 @@ class DigitalPlatformList extends StatelessWidget{
     );
 
     return socialMediaContainer;
-
   }
 }

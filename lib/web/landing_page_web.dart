@@ -1,7 +1,8 @@
 import 'package:colossal_hate/Strings/StringsEs.dart';
 import 'package:colossal_hate/components.dart';
+import 'package:colossal_hate/digital_platform_module.dart';
 import 'package:flutter/material.dart';
-import '../digital_platform_list.dart';
+import '../social_media_module.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({Key? key}) : super(key: key);
@@ -50,7 +51,8 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   height: height,
                   width: width,
                   fit: BoxFit.cover,),
-                DigitalPlatformList()
+                SocialMediaModule(),
+                DigitalPlatformModule()
               ],
             ),
           ),
