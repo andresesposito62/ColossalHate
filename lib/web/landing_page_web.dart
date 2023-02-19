@@ -41,22 +41,32 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           ],
         ),
       ),
-      body:   SafeArea(
-        child: Scaffold(
-          body: Center(
-            child: ListView(
+      body: Container(
+        height: height - 56,
+        child: ListView(
+          children: [
+            Row(
               children: [
-                Image.asset("assets/img/_DSC5109-2.jpg",
-                  alignment: Alignment(-0.9, -0.72),
-                  height: height,
-                  width: width,
-                  fit: BoxFit.cover,),
-                SocialMediaModule(),
-                DigitalPlatformModule()
+                Container(
+                  width: width * 2 / 3,
+                  child: Image.asset("assets/img/_DSC5109-2.jpg",
+                    alignment: Alignment(-0.9, -0.5),
+                    fit: BoxFit.cover,
+                  ) ,
+                ),
+                Container(
+                  width: width - (width * 2 / 3),
+                  child: Column(
+                    children: [
+                      SocialMediaModule(),
+                      DigitalPlatformModule()
+                    ],
+                  ),
+                )
               ],
-            ),
-          ),
-        )
+            )
+          ],
+        ),
       ),
     );
   }
