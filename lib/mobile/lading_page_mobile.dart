@@ -1,5 +1,3 @@
-import 'package:colossal_hate/digital_platform.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Strings/StringsEs.dart';
 import '../components.dart';
@@ -32,20 +30,46 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
           ],
         ),
       ),
-      body:   SafeArea(
-          child: Scaffold(
-            body: Center(
-              child: ListView(
-                children: [
-                  //CardImage("assets/img/_DSC5109-2.jpg"),
-                  Image.asset("assets/img/_DSC5109-2.jpg"),
-                  SocialMediaModule(),
-                  DigitalPlatformModule()
-                ],
-              ),
-            ),
-          )
+      body: Container(
+        alignment: Alignment.center,
+        child: ListView(
+          children: [
+            Image.asset("assets/img/_DSC5109-2.jpg"),
+            SocialMediaModule(),
+            DigitalPlatformModule()
+          ],
+        ),
       ),
     );
   }
 }
+
+/*
+      body: Container(
+        height: height - 56,
+        child: ListView(
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: width * 2 / 3,
+                  child: Image.asset("assets/img/_DSC5109-2.jpg",
+                    alignment: Alignment(-0.9, -0.5),
+                    fit: BoxFit.cover,
+                  ) ,
+                ),
+                Container(
+                  width: width - (width * 2 / 3),
+                  child: Column(
+                    children: [
+                      SocialMediaModule(),
+                      DigitalPlatformModule()
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      )
+*/
