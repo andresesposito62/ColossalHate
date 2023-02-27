@@ -34,9 +34,15 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
         alignment: Alignment.center,
         child: ListView(
           children: [
-            Image.asset("assets/img/_DSC5109-2.jpg"),
-            SocialMediaModule(),
-            DigitalPlatformModule()
+            Container(
+              child: Column(
+                children: [
+                  Image.asset("assets/img/_DSC5109-2.jpg"),
+                  SocialMediaModule(),
+                  DigitalPlatformModule()
+                ],
+              ),
+            )
           ],
         ),
       ),
