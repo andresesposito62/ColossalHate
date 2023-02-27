@@ -50,32 +50,3 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
   }
 }
 
-/*
-      body: Container(
-        height: height - 56,
-        child: ListView(
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: width * 2 / 3,
-                  child: Image.asset("assets/img/_DSC5109-2.jpg",
-                    alignment: Alignment(-0.9, -0.5),
-                    fit: BoxFit.cover,
-                  ) ,
-                ),
-                Container(
-                  width: width - (width * 2 / 3),
-                  child: Column(
-                    children: [
-                      SocialMediaModule(),
-                      DigitalPlatformModule()
-                    ],
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
-      )
-*/
