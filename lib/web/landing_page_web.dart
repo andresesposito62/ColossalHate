@@ -41,20 +41,21 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           ],
         ),
       ),
-      body: Container(
-        height: height - 56,
-        child: ListView(
-          children: [
-            Row(
+      body: ListView(
+        children: [
+          Container(
+            child: Row(
               children: [
                 Container(
                   width: width * 2 / 3,
+                  height: height - 56,
                   child: Image.asset("assets/img/_DSC5109-2.jpg",
                     alignment: Alignment(-0.9, -0.5),
                     fit: BoxFit.cover,
                   ) ,
                 ),
                 Container(
+                  height: height - 56,
                   width: width - (width * 2 / 3),
                   child: Column(
                     children: [
@@ -64,9 +65,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   ),
                 )
               ],
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
