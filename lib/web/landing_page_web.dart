@@ -57,12 +57,16 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Container(
                   height: height - 56,
                   width: width - (width * 2 / 3),
-                  child: Column(
+                  child: ListView(
                     children: [
-                      SocialMediaModule(),
-                      DigitalPlatformModule()
+                      Column(
+                        children: [
+                          SocialMediaModule(),
+                          DigitalPlatformModule()
+                        ],
+                      ),
                     ],
-                  ),
+                  )
                 )
               ],
             ),
