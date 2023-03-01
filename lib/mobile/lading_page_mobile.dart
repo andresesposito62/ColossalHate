@@ -16,7 +16,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      //drawer: Drawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.black,

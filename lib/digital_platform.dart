@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:html' as html;
 
 class DigitalPlatform extends StatelessWidget{
 
@@ -26,7 +28,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(instagramLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://instagram.com/colossalhateband/", "instagram");
+          },
         ),
       );
 
@@ -37,7 +41,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(facebookLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://www.facebook.com/colossalhateband?mibextid=ZbWKwL/", "facebook");
+          },
         ),
       );
 
@@ -49,7 +55,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(tiktokLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://www.tiktok.com/@colossalhate_?_t=8Y1OD8lwPwr&_r=1/", "tiktok");
+          },
         ),
       );
 
@@ -61,7 +69,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(youtubeLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://youtube.com/@colossalhate/", "youtube");
+          },
         ),
       );
 
@@ -74,7 +84,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(spotifyLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://open.spotify.com/track/559f7sp6M1euwTaBAZEfAi?si=HqoAzYVJSSmJqUTTKSE2PQ&utm_source=copy-link/", "spotify");
+          },
         ),
       );
 
@@ -87,7 +99,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(deezerLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://deezer.page.link/QUwZUyN4ieY3C2jV6/", "deezer");
+          },
         ),
       );
 
@@ -100,7 +114,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(tidalLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://tidal.com/album/259921188/", "tidal");
+          },
         ),
       );
 
@@ -113,7 +129,9 @@ class DigitalPlatform extends StatelessWidget{
           icon: Image.asset(appleMusicLogoPath),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
-          onPressed: () {},
+          onPressed: () async{
+            html.window.open("https://music.apple.com/", "apple music");
+          },
         ),
       );
 

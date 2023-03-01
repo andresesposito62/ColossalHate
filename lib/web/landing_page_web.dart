@@ -19,7 +19,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      drawer: Drawer(),
+      //drawer: Drawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.black,
