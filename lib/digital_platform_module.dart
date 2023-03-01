@@ -33,7 +33,7 @@ class DigitalPlatformModule extends StatelessWidget {
     );
 
     final socialMediaContainer = Container(
-      margin: const EdgeInsets.all(0.0),
+      margin: const EdgeInsets.all(10.0),
       alignment: Alignment.center,
       child: Column(
         children: [
