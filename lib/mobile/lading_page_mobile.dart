@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Strings/StringsEs.dart';
 import '../components.dart';
+import '../digital_platform.dart';
 import '../digital_platform_module.dart';
 import '../social_media_module.dart';
 
@@ -39,7 +40,18 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 children: [
                   Image.asset("assets/img/_DSC5109-2.jpg"),
                   SocialMediaModule(),
-                  DigitalPlatformModule()
+                  DigitalPlatformModule(),
+                  Container(
+                    alignment: Alignment.center,
+                    height: 100.0,
+                    width: 100.0,
+                    child: IconButton(
+                      icon: Image.asset("assets/img/youtube-logo.png"),
+                      iconSize: 50.0,
+                      onPressed: () {},
+                    ),
+                  )
+                  ,
                 ],
               ),
             )
