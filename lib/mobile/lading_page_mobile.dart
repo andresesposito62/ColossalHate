@@ -41,17 +41,6 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                   Image.asset("assets/img/_DSC5109-2.jpg"),
                   SocialMediaModule(),
                   DigitalPlatformModule(),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 100.0,
-                    width: 100.0,
-                    child: IconButton(
-                      icon: Image.asset("assets/img/youtube-logo.png"),
-                      iconSize: 50.0,
-                      onPressed: () {},
-                    ),
-                  )
-                  ,
                 ],
               ),
             )

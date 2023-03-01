@@ -21,79 +21,55 @@ class DigitalPlatform extends StatelessWidget{
 
     if(socialMediaId == 1){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(instagramLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(instagramLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
     }else if(socialMediaId == 2){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(facebookLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(facebookLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
     }
     else if(socialMediaId == 3){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(tiktokLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(tiktokLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
     }
     else if(socialMediaId == 4){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(youtubeLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(youtubeLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
@@ -101,20 +77,14 @@ class DigitalPlatform extends StatelessWidget{
 
     else if(socialMediaId == 5){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(spotifyLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(spotifyLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
@@ -122,20 +92,14 @@ class DigitalPlatform extends StatelessWidget{
 
     else if(socialMediaId == 6){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(deezerLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(deezerLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
@@ -143,20 +107,14 @@ class DigitalPlatform extends StatelessWidget{
 
     else if(socialMediaId == 7){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(tidalLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(tidalLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
@@ -164,20 +122,14 @@ class DigitalPlatform extends StatelessWidget{
 
     else if(socialMediaId == 8){
       digitalPlatformContainer = Container(
-        margin: const EdgeInsets.only(
-            top: 10.0,
-            left: 10.0
-        ),
-
-        width: 50.0,
-        height: 50.0,
-
-        decoration: const BoxDecoration(
-            shape: BoxShape.rectangle,
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(appleMusicLogoPath)
-            )
+        alignment: Alignment.center,
+        height: 100.0,
+        width: 100.0,
+        child: IconButton(
+          icon: Image.asset(appleMusicLogoPath),
+          padding: const EdgeInsets.all(0.0),
+          iconSize: 50.0,
+          onPressed: () {},
         ),
       );
 
