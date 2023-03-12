@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
 
-class DigitalPlatform extends StatelessWidget{
+import 'package:flutter_svg/svg.dart';
 
-  static const String instagramLogoPath = "assets/img/instagram-logo.png";
-  static const String facebookLogoPath = "assets/img/facebook-logo.png";
+/*class DigitalPlatform extends StatelessWidget{
+
+  static const String instagramLogoPath = "assets/img/instagram-logo-svg.svg";
+  static const String instagramUrl = "https://instagram.com/colossalhateband/";
+
+  static const String facebookLogoPath = "assets/img/facebook-logo-svg.svg";
+  static const String facebookUrl = "https://www.facebook.com/colossalhateband?mibextid=ZbWKwL/";
+
   static const String tiktokLogoPath = "assets/img/tiktok-logo.png";
   static const String youtubeLogoPath = "assets/img/youtube-logo.png";
   static const String deezerLogoPath = "assets/img/deezer-logo.png";
@@ -24,11 +30,16 @@ class DigitalPlatform extends StatelessWidget{
       digitalPlatformContainer = Container(
         alignment: Alignment.center,
         child: IconButton(
-          icon: Image.asset(instagramLogoPath),
+          icon: SvgPicture.asset(
+              instagramLogoPath,
+              placeholderBuilder: (BuildContext context) => Container(
+                child: const CircularProgressIndicator()
+              )
+          ),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
           onPressed: () async{
-            html.window.open("https://instagram.com/colossalhateband/", "instagram");
+            html.window.open(instagramUrl, "instagram");
           },
         ),
       );
@@ -37,11 +48,17 @@ class DigitalPlatform extends StatelessWidget{
       digitalPlatformContainer = Container(
         alignment: Alignment.center,
         child: IconButton(
-          icon: Image.asset(facebookLogoPath),
+          icon: SvgPicture.asset(
+              facebookLogoPath,
+              placeholderBuilder: (BuildContext context) => Container(
+                  padding: const EdgeInsets.all(50.0),
+                  child: const CircularProgressIndicator()
+              )
+          ),
           padding: const EdgeInsets.all(3.0),
           iconSize: 50.0,
           onPressed: () async{
-            html.window.open("https://www.facebook.com/colossalhateband?mibextid=ZbWKwL/", "facebook");
+            html.window.open(facebookUrl, "facebook");
           },
         ),
       );
@@ -143,4 +160,65 @@ class DigitalPlatform extends StatelessWidget{
     );
   }
 
+}*/
+
+
+
+
+class DigitalPlatform extends StatefulWidget {
+  final id;
+  const DigitalPlatform(this.id,{Key? key}) : super(key: key);
+
+  @override
+  State<DigitalPlatform> createState() => _DigitalPlatform();
 }
+
+class _DigitalPlatform extends State<DigitalPlatform>{
+
+  static const String instagramLogoPath = "assets/img/instagram-logo-svg.svg";
+  static const String instagramUrl = "https://instagram.com/colossalhateband/";
+
+  static const String facebookLogoPath = "assets/img/facebook-logo-svg.svg";
+  static const String facebookUrl = "https://www.facebook.com/colossalhateband?mibextid=ZbWKwL/";
+
+  @override
+  Widget build(BuildContext context) {
+
+    Container digitalPlatformContainer = Container();
+    String logoPath = "";
+    String logoUrl = "";
+
+    if(widget.id == 1){
+      logoPath = instagramLogoPath;
+      logoUrl = instagramUrl;
+    }else if (widget.id == 2){
+      logoPath = facebookLogoPath;
+      logoUrl = facebookUrl;
+    }
+
+    digitalPlatformContainer = Container(
+      alignment: Alignment.center,
+      child: IconButton(
+        icon: SvgPicture.asset(
+            logoPath,
+            placeholderBuilder: (BuildContext context) => Container(
+                child: const CircularProgressIndicator()
+            )
+        ),
+        padding: const EdgeInsets.all(3.0),
+        iconSize: 50.0,
+        onPressed: () async{
+          html.window.open(logoUrl, "instagram");
+        },
+      ),
+    );
+
+    return Row(
+      children: [
+        digitalPlatformContainer
+      ],
+    );
+  }
+
+}
+
