@@ -26,10 +26,10 @@ class SocialMediaModule extends StatelessWidget{
     final socialMediaRow = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        DigitalPlatform(1),
-        DigitalPlatform(2),
-        DigitalPlatform(3),
-        DigitalPlatform(4),
+        DigitalPlatform("instagram"),
+        DigitalPlatform("facebook"),
+        DigitalPlatform("tiktok"),
+        DigitalPlatform("youtube"),
       ],
     );
 

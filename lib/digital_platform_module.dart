@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'Strings/StringsEs.dart';
 import 'digital_platform.dart';
 
@@ -25,10 +24,9 @@ class DigitalPlatformModule extends StatelessWidget {
     final socialMediaRow = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        DigitalPlatform(5),
-        DigitalPlatform(6),
-        DigitalPlatform(7),
-        DigitalPlatform(8),
+        DigitalPlatform("deezer"),
+        DigitalPlatform("tidal"),
+        DigitalPlatform("spotify"),
       ],
     );
 
