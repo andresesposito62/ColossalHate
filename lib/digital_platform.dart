@@ -25,13 +25,17 @@ class _DigitalPlatform extends State<DigitalPlatform>{
   static const String youtubeUrl = "https://youtube.com/@colossalhate/";
 
   static const String deezerLogoPath = "assets/img/deezer-logo-svg.svg";
-  static const String deezerUrl = "https://deezer.page.link/QUwZUyN4ieY3C2jV6/";
+  static const String deezerUrl = "https://www.deezer.com/track/3297542201";
 
   static const String spotifyLogoPath = "assets/img/spotify-logo-svg.svg";
-  static const String spotifyUrl = "https://open.spotify.com/track/559f7sp6M1euwTaBAZEfAi?si=HqoAzYVJSSmJqUTTKSE2PQ&utm_source=copy-link/";
+  static const String spotifyUrl = "https://open.spotify.com/track/1ZrkEs8XWKyXFAJNBdTzqU";
 
   static const String tidalLogoPath = "assets/img/tidal-logo-svg.svg";
-  static const String tidalUrl = "https://tidal.com/album/259921188/";
+  static const String tidalUrl = "https://music.youtube.com/watch?v=a3CI4gR7Lp8&si=LcBFe6vaiAQCkxVW";
+
+  static const String youtubeMusicLogoPath = "assets/img/youtube_music_icon_svg.svg";
+  static const String youtubeMusicUrl = "https://music.youtube.com/watch?v=a3CI4gR7Lp8&si=LcBFe6vaiAQCkxVW";
+
 
 
   @override
@@ -59,9 +63,9 @@ class _DigitalPlatform extends State<DigitalPlatform>{
     }else if (widget.digitalPlatformName == "spotify"){
       logoPath = spotifyLogoPath;
       logoUrl = spotifyUrl;
-    }else if (widget.digitalPlatformName == "tidal"){
-      logoPath = tidalLogoPath;
-      logoUrl = tidalUrl;
+    }else if (widget.digitalPlatformName == "youtubeMusic"){
+      logoPath = youtubeMusicLogoPath;
+      logoUrl = youtubeMusicUrl;
     }
 
     digitalPlatformContainer = Container(

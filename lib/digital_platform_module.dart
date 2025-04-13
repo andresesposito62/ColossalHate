@@ -25,7 +25,7 @@ class DigitalPlatformModule extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         DigitalPlatform("deezer"),
-        DigitalPlatform("tidal"),
+        DigitalPlatform("youtubeMusic"),
         DigitalPlatform("spotify"),
       ],
     );
